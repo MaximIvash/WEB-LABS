@@ -37,3 +37,14 @@ echo "$days_per_language days\n";
 echo "<h3>№4</h3>";
 echo 8**2;
 echo"\n";
+//Задание №5
+echo "<h3>№5</h3>";
+$my_num=3542;
+$answer = $my_num;
+$answer += 2;
+$answer *= 2;
+$answer -= 2;
+$answer /= 2;
+$answer -= $my_num;
+echo "$answer \n";
+
