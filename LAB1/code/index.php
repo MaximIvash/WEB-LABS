@@ -152,4 +152,13 @@ while ($sum <= 10)
 }
 echo $numOfNums;
 echo "\n";
-
+//Задание №7
+echo "<h3>№7</h3>";
+function printStringReturnNumber()
+{
+    echo"Hello, there.\n";
+    return strlen("Hello, there.");
+}
+$my_num = PrintStringReturnNumber();
+echo $my_num;
+echo "\n";
