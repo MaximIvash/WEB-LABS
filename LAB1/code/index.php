@@ -162,3 +162,56 @@ function printStringReturnNumber()
 $my_num = PrintStringReturnNumber();
 echo $my_num;
 echo "\n";
+//Задание №8
+echo "<h3>№8</h3>";
+function increaseEnthusiasm($item)
+{
+    return "$item". "!";
+}
+$string = "Hello, there ";
+echo increaseEnthusiasm($string);
+echo "\n";
+function repeatThreeTimes($string)
+{
+    return str_repeat($string, 3);
+}
+echo repeatThreeTimes($string);
+echo "\n";
+echo increaseEnthusiasm(repeatThreeTimes($string));
+echo "\n";
+
+function cut($str, $num_of_simb = 10)
+{
+    return substr_replace($str, " ", $num_of_simb, strlen($str) - $num_of_simb);
+}
+echo cut($string, 3);
+echo "\n";
+
+$arr_for_task8=[1,20,17,35,-1,10];
+function printArray($arr_for_task8, $i = 0)
+{
+    echo $arr_for_task8[$i]. ", ";
+    if(array_key_last($arr_for_task8) > $i)
+    {
+        printArray($arr_for_task8, ++$i);
+    }
+}
+printArray($arr_for_task8);
+echo "\n";
+function sum_of_numbers(int $num)
+{
+    $out = 0;
+    while($num != 0 )
+    {
+        $out += $num % 10;
+        $num = intdiv($num, 10);
+    }
+    if($out >= 10)
+    {
+        $out = sum_of_numbers($out);
+    }
+    return $out;
+}
+echo sum_of_numbers(43521);
+echo "\n";
+
