@@ -306,7 +306,7 @@ function comparison($x, $y)
 
 function equality ($x, $y)
 {
-    if ($x == $y)
+    if ($x === $y)
     {
         return true;
     }
@@ -355,4 +355,14 @@ if (count($arr) == 3)
     echo "Сумма элементов: " . $result;
     echo "\n";
 }
-
+//Задание №11
+echo "<h3>№11</h3>";
+for($i = 1; $i <= 20; $i++)
+{
+    $count = 0;
+    while($count++ < $i)
+    {
+        echo "x";
+    }
+    echo "\n";
+}
