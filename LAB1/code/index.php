@@ -1,6 +1,5 @@
 <?php
 echo "<pre>";
-
 // Задание №1
 echo "<h3>№1</h3>";
 $very_bad_unclear_name = "15 chicken wings";
@@ -8,7 +7,7 @@ $very_bad_unclear_name = "15 chicken wings";
 $order = &$very_bad_unclear_name;
 $order .= ", with big cola";
 
-echo "\nYour order is: $very_bad_unclear_name.\n";
+echo "\nYour order is: $very_bad_unclear_name.";
 // Задание №2
 echo "<h3>№2</h3>";
 $int = 36;
@@ -214,4 +213,85 @@ function sum_of_numbers(int $num)
 }
 echo sum_of_numbers(43521);
 echo "\n";
+//Задание №9
+echo "<h3>№9</h3>";
+$arr_for_task9 = [];
+for($i = 0; $i <= 10; $i++)
+{
+    $count = 0;
+    $arr_for_task9[$i] = "x";
+    while($count < $i)
+    {
+        $arr_for_task9[$i] .= "x";
+        $count++;
+    }
+}
+printArray($arr_for_task9);
+echo "\n";
+function arrayFill($value, int $amount)
+{
+    $res = [];
+    for($i = 0; $i < $amount; $i++)
+    {
+        $res[$i] = $value;
+    }
+    return $res;
+}
+
+$arr_for_task9_2 = [[]];
+for($i = 0; $i < rand(1, 10); $i++)
+{
+    for($j = 0; $j < rand(1, 10); $j++)
+    {
+        $arr_for_task9_2[$i][$j] = rand(1, 10);
+    }
+}
+$res = 0;
+for($i = 0; $i < array_key_last($arr_for_task9_2); $i++)
+{
+    for($j = 0; $j < array_key_last($arr_for_task9_2[$i]); $j++)
+    {
+        $res += $arr_for_task9_2[$i][$j];
+    }
+}
+echo "Сумма элементов: ". $res;
+echo "\n";
+
+$arr_for_task9_3 = [2, 5, 3, 9];
+for ($i = 0; $i < 2; $i++)
+{
+    $arr_for_task9_3[$i] *= $arr_for_task9_3[$i + 1];
+}
+$result = 0;
+for ($i = 0; $i < count($arr_for_task9_3); $i++)
+{
+    $result += $arr_for_task9_3[$i];
+}
+echo $result;
+echo "\n";
+
+$user = [
+    "name" => "Максим",
+    "surname" => "Иващенко",
+    "patronymic" => "Александрович"
+];
+echo "$user[surname] $user[name] $user[patronymic]";
+echo "\n";
+
+$date = [
+    "year" => 2024,
+    "month" => 3,
+    "day" => 19
+];
+echo "$date[year]-$date[month]-$date[day]";
+echo "\n";
+
+$arr = ["a","b","c","d","e"];
+echo count($arr);
+echo "\n";
+echo $arr[array_key_last($arr)];
+echo "\n";
+echo $arr[array_key_last($arr) - 1];
+echo "\n";
+
 
