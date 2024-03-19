@@ -366,3 +366,25 @@ for($i = 1; $i <= 20; $i++)
     }
     echo "\n";
 }
+//Задание №12
+echo "<h3>№12</h3>";
+$arr_for_task12 = [6,10,32,44,26,11,2,1,148];
+echo "Среднее сначение: ".(array_sum($arr_for_task12) / count($arr_for_task12));
+echo "\n";
+echo "Сумма чисел от 1 до 100: ".array_sum(range(1, 100));
+echo "\n";
+
+$arr_for_task12_2 = [4,16,256];
+$arr_for_task12_3 = array_map("sqrt", $arr_for_task12_2);
+echo "Массив с квадратными корнями:";
+foreach ($arr_for_task12_3 as $value)
+{
+    echo $value . " ";
+}
+echo"\n";
+
+$arr_for_task12_4 = array_combine(range('a', 'z'), range(1, 26));
+
+$str_nums = "1234567890";
+$couples = str_split($str_nums, 2);
+echo "Сумма пар: ", array_sum($couples);
