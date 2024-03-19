@@ -47,4 +47,109 @@ $answer -= 2;
 $answer /= 2;
 $answer -= $my_num;
 echo "$answer \n";
+//Задание №6
+echo "<h3>№6</h3>";
+$a=10;
+$b=3;
+echo $a % $b;
+echo "\n";
+
+if ($a % $b === 0)
+{
+    echo "Делится\n";
+}
+else
+{
+    echo "Делится с остатком\n";
+}
+
+$st = pow(2, 10);
+echo "2^10=$st\n";
+$qr = sqrt(245);
+echo "sqrt(245)=$qr\n";
+
+$arr = [4, 2, 5, 19, 13, 0, 10];
+$sumOfSquared = 0;
+foreach ($arr as $value)
+{
+    $sumOfSquared += $value ** 2;
+}
+echo sqrt($sumOfSquared);
+echo "\n";
+
+echo round(sqrt(379), 0);
+echo "\n";
+echo round(sqrt(379), 1);
+echo "\n";
+echo round(sqrt(379), 2);
+echo "\n";
+
+$floor = floor(sqrt(587));
+$ceil = ceil(sqrt(587));
+$arr = array("floor"=>$floor, "ceil"=>$ceil);
+echo "floor:" . $arr["floor"];
+echo "\n";
+echo "ceil:" . $arr["ceil"];
+echo "\n";
+
+$nums = [4, -2, 5, 19, -130, 0, 10];
+echo "min = " .min($nums);
+echo "\n";
+echo "max = " .max($nums);
+echo "\n";
+
+echo "Random num (1-100) = " .rand(1, 100);
+echo "\n";
+$randArr = [];
+for ($i = 0; $i < 10; $i++)
+{
+    $randArr[$i] = rand(1, 100);
+}
+foreach ($randArr as $value)
+{
+    echo $value . " ";
+}
+echo "\n";
+
+$a = 66;
+$b = 77;
+$abs = abs($a - $b);
+echo $abs;
+echo "\n";
+
+$arr= [1, 2, -1, -2, 3, -3];
+foreach ($arr as $value)
+{
+    $value = abs($value);
+    echo $value . " ";
+}
+echo "\n";
+
+$num = 30;
+$i = 1;
+$arr1 = [];
+while ($i <= $num)
+{
+    if(0 === $num% $i)
+    {
+        $arr1[] = $i;
+    }
+    $i++;
+}
+foreach ($arr1 as $value)
+{
+    echo $value . " ";
+}
+echo "\n";
+
+$arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+$sum = 0;
+$numOfNums = 0;
+while ($sum <= 10)
+{
+    $sum += $arr2[$numOfNums];
+    $numOfNums += 1;
+}
+echo $numOfNums;
+echo "\n";
 
