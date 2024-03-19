@@ -293,5 +293,66 @@ echo $arr[array_key_last($arr)];
 echo "\n";
 echo $arr[array_key_last($arr) - 1];
 echo "\n";
+//Задане №10
+echo "<h3>№10</h3>";
+function comparison($x, $y)
+{
+    if ($x + $y > 10)
+    {
+        return true;
+    }
+    return false;
+}
 
+function equality ($x, $y)
+{
+    if ($x == $y)
+    {
+        return true;
+    }
+    return false;
+}
+
+$test = rand(0,1);
+if (!$test) echo "Верно";
+echo "\n";
+function Sum_num(int $num)
+{
+    $res = 0;
+    while ($res != 0)
+    {
+        $res += $num % 10;
+        $num = intdiv($num, 10);
+    }
+    return $res;
+}
+
+$age = 19;
+if ($age < 10 or $age > 99)
+{
+    echo "Число меньше 10 или больше 99\n";
+} else
+{
+    if (Sum_num($age) <= 9)
+    {
+        echo "Сумма цифр однозначна\n";
+    } else
+        echo "Сумма цифр двузначна\n";
+}
+
+$arr = [];
+for ($i = 0; $i < rand(1, 10); $i++)
+{
+    $arr[$i] = rand(1, 10);
+}
+if (count($arr) == 3)
+{
+    $result = 0;
+    for ($i = 0; $i < count($arr); $i++)
+    {
+        $result += $arr[$i];
+    }
+    echo "Сумма элементов: " . $result;
+    echo "\n";
+}
 
